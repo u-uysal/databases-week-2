@@ -20,3 +20,10 @@ FROM world.country c
 join world.countrylanguage l
 on l.CountryCode = c.Code
 WHERE IsOfficial ="T"
+
+--List the country name and their official languages.?
+SELECT c.Name ,l.Language
+FROM world.country c
+join world.countrylanguage l
+on l.CountryCode = c.Code
+WHERE IsOfficial ="T"
