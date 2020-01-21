@@ -13,3 +13,10 @@ ON ci.CountryCode=co.Code
 WHERE ci.Population>3000000
 Group by co.name 
 having cityCount >=3
+
+--What is the number of all the official languages? 
+SELECT count(c.Name) 
+FROM world.country c
+join world.countrylanguage l
+on l.CountryCode = c.Code
+WHERE IsOfficial ="T"
