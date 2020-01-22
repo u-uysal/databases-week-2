@@ -50,3 +50,11 @@ SELECT Name , Population
 FROM world.country
 order by Population
 limit 1
+
+--all the languages spoken in Eastern Africa
+
+SELECT Language
+FROM world.country c
+join world.countrylanguage l
+on l.CountryCode =c.Code
+where Region="Eastern Africa"
