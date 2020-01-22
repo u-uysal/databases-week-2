@@ -43,3 +43,10 @@ having count(1)=1
 SELECT name 
 FROM world.country
 WHERE Capital  IS NULL
+
+--which country has lowest population
+
+SELECT Name , Population
+FROM world.country
+order by Population
+limit 1
