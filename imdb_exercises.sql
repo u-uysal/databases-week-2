@@ -11,3 +11,8 @@ from (select floor(age / 10) * 10 as decade
       from imdb.actors) t
 group by decade
 order by decade
+
+--Add a column to the films table for storing the duration (runtime) or each film.
+
+ALTER TABLE imdb.films
+-> ADD COLUMN Duration TIME(3);
