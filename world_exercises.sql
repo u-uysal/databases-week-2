@@ -37,3 +37,9 @@ on l.CountryCode = c.Code
 WHERE IsOfficial ="T"
 group by c.Name
 having count(1)=1
+
+--Find which countries have not a capital
+
+SELECT name 
+FROM world.country
+WHERE Capital  IS NULL
