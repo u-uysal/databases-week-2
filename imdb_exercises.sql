@@ -25,3 +25,7 @@ ALTER TABLE imdb.actors MODIFY age INTEGER;
 
 SELECT upper(concat(fname," ",lname," BIO:"," ",biography) ) as BIOGRAPHY
 FROM imdb.actors;
+
+--Delete the column biography from actors
+
+ALTER TABLE imdb.actors DROP COLUMN age;
