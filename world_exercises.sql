@@ -27,3 +27,13 @@ FROM world.country c
 join world.countrylanguage l
 on l.CountryCode = c.Code
 WHERE IsOfficial ="T"
+
+--All countries that have only one official language
+
+SELECT c.Name
+FROM world.country c
+join world.countrylanguage l
+on l.CountryCode = c.Code
+WHERE IsOfficial ="T"
+group by c.Name
+having count(1)=1
