@@ -20,3 +20,8 @@ ALTER TABLE imdb.films
 --Alter the data type of column age to INT.
 
 ALTER TABLE imdb.actors MODIFY age INTEGER;
+
+--Print the names and biographies of the actors in this format “ANNE HATHAWAY BIO: 1 golden globe”
+
+SELECT upper(concat(fname," ",lname," BIO:"," ",biography) ) as BIOGRAPHY
+FROM imdb.actors;
