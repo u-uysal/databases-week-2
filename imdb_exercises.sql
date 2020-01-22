@@ -16,3 +16,7 @@ order by decade
 
 ALTER TABLE imdb.films
 -> ADD COLUMN Duration TIME(3);
+
+--Alter the data type of column age to INT.
+
+ALTER TABLE imdb.actors MODIFY age INTEGER;
